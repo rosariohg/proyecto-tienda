@@ -23,6 +23,7 @@ RUN php composer-setup.php
 RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 
+# CLONE AND CONFIG PROJECT
 WORKDIR /var/www/html/
 RUN rm -R /var/www/html/*
 RUN git clone https://github.com/rosariohg/proyecto-tienda.git .
@@ -30,15 +31,21 @@ RUN composer install
 RUN cp .env.example .env && php artisan key:generate
 RUN sed -i 's/DB_DATABASE=homestead/DB_DATABASE=tienda/g' .env
 RUN sed -i 's/DB_USERNAME=homestead/DB_USERNAME=root/g' .env
-RUN sed -i 's/DB_PASSWORD=secret/DB_PASSWORD=/g' .env
+RUN sed -i 's/DB_PASSWORD=secret/DB_PASSWORD=admin/g' .env
+
+# CONFIG DATABASE PASSWORD
+# AND MIGRATE PROJECT DATABASE
 RUN service mysql restart && \
-    echo "create database `tienda`;" | mysql -u root -p''
+    echo "create database tienda; use mysql; UPDATE mysql.user SET Password=PASSWORD('admin') WHERE User='root'; GRANT ALL ON tienda.* TO root@localhost IDENTIFIED BY 'admin'; FLUSH privileges;" | mysql -u root
+RUN sed -i 's/password =/password = admin/g' /etc/mysql/debian.cnf && \
+    service mysql restart && \
+    php artisan migrate
+
+#RUN php artisan migrate
 
 EXPOSE 80
+EXPOSE 8000
 
-CMD ["service mysql restart"]
-
-#    rm -rf /var/lib/apt/lists/* \
-#    apt autoclean \
-#    apt clean
+CMD ["sh","-c","service apache2 restart && service mysql restart && php artisan serve --host 0.0.0.0"]
+# CMD ["php", "artisan", "serve", "--host", "0.0.0.0"]
 
