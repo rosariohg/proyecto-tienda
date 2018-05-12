@@ -6,26 +6,24 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Consumo
+ * Class Consumir
  * @package App\Models
- * @version April 30, 2018, 4:22 am UTC
+ * @version May 12, 2018, 8:45 pm UTC
  */
-class Consumo extends Model
+class Consumir extends Model
 {
     use SoftDeletes;
 
-    public $table = 'consumos';
+    public $table = 'consumirs';
     
 
     protected $dates = ['deleted_at'];
 
 
     public $fillable = [
-        'consumo_id',
-        'descripcion',
-        'cantidad',
-        'precioUnitario',
-        'precioTotal'
+        'producto_id',
+        'cantidad_total',
+        'cantidad_consumo'
     ];
 
     /**
@@ -34,11 +32,9 @@ class Consumo extends Model
      * @var array
      */
     protected $casts = [
-        'consumo_id' => 'integer',
-        'descripcion' => 'string',
-        'cantidad' => 'string',
-        'precioUnitario' => 'string',
-        'precioTotal' => 'string'
+        'producto_id' => 'integer',
+        'cantidad_total' => 'string',
+        'cantidad_consumo' => 'string'
     ];
 
     /**

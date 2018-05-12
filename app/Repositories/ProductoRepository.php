@@ -12,10 +12,9 @@ class ProductoRepository extends BaseRepository
      */
     protected $fieldSearchable = [
         'nombre',
-        'codigo',
-        'cantidad',
-        'precio',
-        'imagen'
+        'descripcion',
+        'foto',
+        'cantidad'
     ];
 
     /**

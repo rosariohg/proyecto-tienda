@@ -43,10 +43,9 @@ trait MakeProductoTrait
 
         return array_merge([
             'nombre' => $fake->word,
-            'codigo' => $fake->word,
-            'cantidad' => $fake->randomDigitNotNull,
-            'precio' => $fake->word,
-            'imagen' => $fake->word,
+            'descripcion' => $fake->word,
+            'foto' => $fake->word,
+            'cantidad' => $fake->word,
             'created_at' => $fake->word,
             'updated_at' => $fake->word
         ], $productoFields);

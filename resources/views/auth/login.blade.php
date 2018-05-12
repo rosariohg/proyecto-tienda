@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>KAMPFER</title>
+    <title>InfyOm Laravel Generator</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -34,7 +34,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>KAMPFER</b></a>
+        <a href="{{ url('/home') }}"><b>InfyOm </b>Generator</a>
     </div>
 
     <!-- /.login-logo -->
@@ -68,21 +68,20 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox" name="remember"> Recordar contraseña
+                            <input type="checkbox" name="remember"> Remember Me
                         </label>
                     </div>
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
                 </div>
                 <!-- /.col -->
             </div>
         </form>
 
-        <a href="{{ url('/password/reset') }}">¿Has olvida tu password?</a><br>
-        <hr />
-        <a class="btn btn-block btn-success" href="{{ url('/register') }}" class="text-center">Registrar un nuevo miembro</a>
+        <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
+        <a href="{{ url('/register') }}" class="text-center">Register a new membership</a>
 
     </div>
     <!-- /.login-box-body -->

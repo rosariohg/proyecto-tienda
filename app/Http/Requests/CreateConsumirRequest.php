@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Models\Consumo;
+use App\Models\Consumir;
 
-class UpdateConsumoRequest extends FormRequest
+class CreateConsumirRequest extends FormRequest
 {
 
     /**
@@ -25,6 +25,6 @@ class UpdateConsumoRequest extends FormRequest
      */
     public function rules()
     {
-        return Consumo::$rules;
+        return Consumir::$rules;
     }
 }

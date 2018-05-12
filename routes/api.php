@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::resource('productos', 'ProductoAPIController');
+
+Route::resource('consumirs', 'ConsumirAPIController');

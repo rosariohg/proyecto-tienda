@@ -18,8 +18,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'ProductoController@index');
+Route::get('/home', 'HomeController@index');
 
 Route::resource('productos', 'ProductoController');
 
-Route::resource('consumos', 'ConsumoController');
+Route::resource('consumirs', 'ConsumirController');

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>KAMPFER</title>
+    <title>InfyOm Generator</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
 
         <!-- Logo -->
         <a href="#" class="logo">
-            <b>KAMPFER</b>
+            <b>InfyOm</b>
         </a>
 
         <!-- Header Navbar -->
@@ -41,7 +41,7 @@
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="{{ asset('/images/logo.jpg') }}"
+                            <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg"
                                  class="user-image" alt="User Image"/>
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs">{!! Auth::user()->name !!}</span>
@@ -49,11 +49,11 @@
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="{{ asset('/images/logo.jpg') }}"
+                                <img src="http://infyom.com/images/logo/blue_logo_150x150.jpg"
                                      class="img-circle" alt="User Image"/>
                                 <p>
                                     {!! Auth::user()->name !!}
-                                    <small>Miembro desde {!! Auth::user()->created_at->format('M. Y') !!}</small>
+                                    <small>Member since {!! Auth::user()->created_at->format('M. Y') !!}</small>
                                 </p>
                             </li>
                             <!-- Menu Footer-->
@@ -64,7 +64,7 @@
                                 <div class="pull-right">
                                     <a href="{!! url('/logout') !!}" class="btn btn-default btn-flat"
                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        Salir
+                                        Sign out
                                     </a>
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST"
                                           style="display: none;">
@@ -88,7 +88,7 @@
 
     <!-- Main Footer -->
     <footer class="main-footer" style="max-height: 100px;text-align: center">
-        <strong>Copyright © 2018 </strong> Todos los derechos reservados.
+        <strong>Copyright © 2016 <a href="http://infyom.com" target="_blank">InfyOm Technologies</a>.</strong> All rights reserved.
     </footer>
 
 </div>

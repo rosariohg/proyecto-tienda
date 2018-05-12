@@ -10,28 +10,22 @@
     <p>{!! $producto->nombre !!}</p>
 </div>
 
-<!-- Codigo Field -->
+<!-- Descripcion Field -->
 <div class="form-group">
-    {!! Form::label('codigo', 'Codigo:') !!}
-    <p>{!! $producto->codigo !!}</p>
+    {!! Form::label('descripcion', 'Descripcion:') !!}
+    <p>{!! $producto->descripcion !!}</p>
+</div>
+
+<!-- Foto Field -->
+<div class="form-group">
+    {!! Form::label('foto', 'Foto:') !!}
+    <p>{!! $producto->foto !!}</p>
 </div>
 
 <!-- Cantidad Field -->
 <div class="form-group">
     {!! Form::label('cantidad', 'Cantidad:') !!}
     <p>{!! $producto->cantidad !!}</p>
-</div>
-
-<!-- Precio Field -->
-<div class="form-group">
-    {!! Form::label('precio', 'Precio:') !!}
-    <p>{!! $producto->precio !!}</p>
-</div>
-
-<!-- Imagen Field -->
-<div class="form-group">
-    {!! Form::label('imagen', 'Imagen:') !!}
-    <p>{!! $producto->imagen !!}</p>
 </div>
 
 <!-- Created At Field -->

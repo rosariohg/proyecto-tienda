@@ -2,20 +2,18 @@
 
 namespace App\Repositories;
 
-use App\Models\Consumo;
+use App\Models\Consumir;
 use InfyOm\Generator\Common\BaseRepository;
 
-class ConsumoRepository extends BaseRepository
+class ConsumirRepository extends BaseRepository
 {
     /**
      * @var array
      */
     protected $fieldSearchable = [
-        'consumo_id',
-        'descripcion',
-        'cantidad',
-        'precioUnitario',
-        'precioTotal'
+        'producto_id',
+        'cantidad_total',
+        'cantidad_consumo'
     ];
 
     /**
@@ -23,6 +21,6 @@ class ConsumoRepository extends BaseRepository
      **/
     public function model()
     {
-        return Consumo::class;
+        return Consumir::class;
     }
 }

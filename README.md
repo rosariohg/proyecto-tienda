@@ -16,7 +16,7 @@ php artisan infyom:api_scaffold Producto
 
 ## Modificamos Providers AppService
 
-bd utfm24
+Schema::defaultStringLength(191)
 
 ## Migramos bd
 
