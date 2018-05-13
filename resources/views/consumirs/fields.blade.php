@@ -1,7 +1,7 @@
 <!-- Producto Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('producto_id', 'Producto Id:') !!}
-    {!! Form::select('producto_id', $productos ], null, ['class' => 'form-control']) !!}
+    {!! Form::label('producto_id', 'Producto:') !!}
+    {!! Form::select('producto_id', $productos, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Cantidad Total Field -->

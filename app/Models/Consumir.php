@@ -15,15 +15,13 @@ class Consumir extends Model
     use SoftDeletes;
 
     public $table = 'consumirs';
-    
 
     protected $dates = ['deleted_at'];
-
 
     public $fillable = [
         'producto_id',
         'cantidad_total',
-        'cantidad_consumo'
+        'cantidad_consumo',
     ];
 
     /**
@@ -32,9 +30,9 @@ class Consumir extends Model
      * @var array
      */
     protected $casts = [
-        'producto_id' => 'integer',
-        'cantidad_total' => 'string',
-        'cantidad_consumo' => 'string'
+        'producto_id'      => 'integer',
+        'cantidad_total'   => 'string',
+        'cantidad_consumo' => 'string',
     ];
 
     /**
@@ -43,8 +41,12 @@ class Consumir extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    public function producto()
+    {
+        return $this->hasOne('App\Models\Producto', 'id');
+    }
+
 }

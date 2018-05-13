@@ -11,7 +11,7 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                     @include('consumirs.show_fields')
-                    <a href="{!! route('consumirs.index') !!}" class="btn btn-default">Back</a>
+                    <a href="{!! route('consumirs.index') !!}" class="btn btn-default">Regresar</a>
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>InfyOm Generator</title>
+    <title>KAMPFER</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -24,7 +24,7 @@
 
         <!-- Logo -->
         <a href="#" class="logo">
-            <b>InfyOm</b>
+            <b>KAMPFER</b>
         </a>
 
         <!-- Header Navbar -->
@@ -58,13 +58,13 @@
                             </li>
                             <!-- Menu Footer-->
                             <li class="user-footer">
-                                <div class="pull-left">
+                                <!--<div class="pull-left">
                                     <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                </div>
+                                </div>-->
                                 <div class="pull-right">
                                     <a href="{!! url('/logout') !!}" class="btn btn-default btn-flat"
                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                        Sign out
+                                        Salir
                                     </a>
                                     <form id="logout-form" action="{{ url('/logout') }}" method="POST"
                                           style="display: none;">
@@ -88,7 +88,7 @@
 
     <!-- Main Footer -->
     <footer class="main-footer" style="max-height: 100px;text-align: center">
-        <strong>Copyright © 2016 <a href="http://infyom.com" target="_blank">InfyOm Technologies</a>.</strong> All rights reserved.
+        <strong>Copyright © 2018 </strong> Todos los derechos reservados.
     </footer>
 
 </div>

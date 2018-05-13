@@ -1,8 +1,8 @@
 <!-- Id Field -->
-<div class="form-group">
+<!--<div class="form-group">
     {!! Form::label('id', 'Id:') !!}
     <p>{!! $producto->id !!}</p>
-</div>
+</div>-->
 
 <!-- Nombre Field -->
 <div class="form-group">
@@ -19,7 +19,7 @@
 <!-- Foto Field -->
 <div class="form-group">
     {!! Form::label('foto', 'Foto:') !!}
-    <p>{!! $producto->foto !!}</p>
+    <p><img style="width: 75px" src="{!! $producto->foto !!}" alt="" /></p>
 </div>
 
 <!-- Cantidad Field -->
@@ -30,13 +30,12 @@
 
 <!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
+    {!! Form::label('created_at', 'Creado:') !!}
     <p>{!! $producto->created_at !!}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
+    {!! Form::label('updated_at', 'Actualizado:') !!}
     <p>{!! $producto->updated_at !!}</p>
 </div>
-

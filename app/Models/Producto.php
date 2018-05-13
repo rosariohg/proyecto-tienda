@@ -15,16 +15,14 @@ class Producto extends Model
     use SoftDeletes;
 
     public $table = 'productos';
-    
 
     protected $dates = ['deleted_at'];
-
 
     public $fillable = [
         'nombre',
         'descripcion',
         'foto',
-        'cantidad'
+        'cantidad',
     ];
 
     /**
@@ -33,10 +31,10 @@ class Producto extends Model
      * @var array
      */
     protected $casts = [
-        'nombre' => 'string',
+        'nombre'      => 'string',
         'descripcion' => 'string',
-        'foto' => 'string',
-        'cantidad' => 'string'
+        'foto'        => 'string',
+        'cantidad'    => 'string',
     ];
 
     /**
@@ -45,8 +43,11 @@ class Producto extends Model
      * @var array
      */
     public static $rules = [
-        
+
     ];
 
-    
+    public function consumos()
+    {
+        return $this->hasMany('App\Models\Consumir');
+    }
 }

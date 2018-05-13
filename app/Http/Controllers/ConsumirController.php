@@ -44,7 +44,7 @@ class ConsumirController extends AppBaseController
      */
     public function create()
     {
-        $productos = Producto::all();
+        $productos = Producto::pluck('nombre', 'id');
         return view('consumirs.create', compact('productos'));
     }
 
